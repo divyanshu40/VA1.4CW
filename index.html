@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+ 
+</head>
+
+<body>
+
+  <label for="inputName">Enter your name:</label>
+  <input type="text" id="inputName"/>
+  <button id="displayNameButton">Display Name</button>
+  <p id="displayName"></p>
+  <button id="changeStyleButton">Change Style</button>
+ 
+  <script>
+
+const inputName = document.querySelector("#inputName")
+    const displayNameButton = document.querySelector("#displayNameButton")
+    const displayName = document.querySelector("#displayName")
+    const changeStyleButton = document.querySelector("#changeStyleButton")
+    displayNameButton.addEventListener("click" , function(){
+      let name = inputName.value
+      displayName.textContent = `your Name: ${name}`
+    })
+    changeStyleButton.addEventListener("click" , function(){
+      displayName.style.color = "blue"
+      displayName.style.backgroundColor = "yellow"
+    })
+
+    
+  </script>
+</body>
+
+</html>
